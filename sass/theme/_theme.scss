@@ -1,0 +1,71 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+
+body {
+    padding-top: 8.5vh;
+}
+
+.navbar{
+    background-color: $white;
+    font-family: 'Arsenal';
+    font-size: 22px;
+}
+
+.navbar-brand{
+    color: #000000;
+}
+
+.custom-logo-link .img-fluid{
+    max-height: 8.5vh;
+    height: 100%;
+    width: auto;
+}
+
+#wrapper-footer {
+    background-color: $secondary;
+    color: $white;
+}
+
+.navbar-nav .active{
+    color: $pastel-primary!important;
+}
+
+nav .nav-link{   
+    line-height: 100%; 
+    color: $gray;
+}
+
+nav .nav-link:hover{
+    background-color: $pastel-primary;
+}
+
+.showcase{
+    margin-top: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.showcase-tabs{
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background-color: $secondary;
+    height: 55px;
+}
+
+.infotab{
+    font-family: 'Arsenal';
+    font-weight: 500;
+    font-size: 20px;
+    width: 300px;
+    background-color: $secondary;
+    color: $white;
+}
+
+.infotab:hover{
+    text-decoration: none;
+}
+
+.seeme{
+    background-color: $pastel-primary;
+}
