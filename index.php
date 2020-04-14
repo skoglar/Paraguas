@@ -40,6 +40,27 @@ $container = get_theme_mod( 'paraguas_container_type' );
 						<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 					</ol>
 					<div class="carousel-inner">
+						<?php 
+							// the query
+							$the_query = new WP_Query( array(
+								'category_name' => 'Novedades',
+								'posts_per_page' => 3,
+							)); 
+						?>
+
+						<?php if ( $the_query->have_posts() ) : ?>
+							<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+								<div class="carousel-item active">
+								<img class="d-block w-100" src="<?php the_post_thumbnail_url(); ?>" alt="novedades">
+								</div>
+								'<a href="'.esc_url($featured_img_url).'" rel="lightbox">'; 
+							<?php endwhile; ?>
+							<?php wp_reset_postdata(); ?>
+
+						<?php else : ?>
+							<p><?php echo 'No se encontraron posts (esto es temporal)'; ?></p>
+						<?php endif; ?>
+					</div>
 						<div class="carousel-item active">
 						<img class="d-block w-100" src="http://192.168.0.2/wp/wp-content/uploads/2020/04/banner1-01.jpg" alt="First slide">
 						</div>
