@@ -2,21 +2,13 @@ Travis build: [![Build Status](https://travis-ci.org/paraguas/paraguas.svg?branc
 
 #### See: [Official Demo](https://paraguas.com/paraguas) | Read: [Official Docs Page](https://paraguas.github.io/)
 
-# Paraguas WordPress Theme Framework
+# Paraguas an Understrap based theme for InvertidoEdiciones
 
-Website: [https://paraguas.com](https://paraguas.com)
-
-Child Theme Project: [https://github.com/paraguas/paraguas-child](https://github.com/paraguas/paraguas-child)
+Website: [https://github.com/skoglar/Paraguas](https://github.com/skoglar/Paraguas)
 
 ## About
 
 I’m a huge fan of Underscores, Bootstrap, and Sass. Why not combine these into a solid WordPress Theme Framework? That’s what Paraguas is. You can use it as a starter theme and build your own theme on top of it. Or you can use it as a parent theme and create your own child theme for Paraguas.
-
-## License
-Paraguas WordPress Theme, Copyright 2013-2018 Holger Koenemann
-Paraguas is distributed under the terms of the GNU GPL version 2
-
-http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
 ## Changelog
 See [changelog](CHANGELOG.md)
