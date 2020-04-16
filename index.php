@@ -53,7 +53,7 @@ $container = get_theme_mod( 'paraguas_container_type' );
 								<div class="carousel-item active">
 								<img class="d-block w-100" src="<?php the_post_thumbnail_url(); ?>" alt="novedades">
 								</div>
-								'<a href="'.esc_url($featured_img_url).'" rel="lightbox">'; 
+								<a href="'.esc_url($featured_img_url).'" rel="lightbox">; 
 							<?php endwhile; ?>
 							<?php wp_reset_postdata(); ?>
 
