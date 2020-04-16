@@ -88,7 +88,7 @@ $container = get_theme_mod( 'paraguas_container_type' );
 						<?php 
 							// the query
 							$the_query = new WP_Query( array(
-								'category_name' => 'dogitos',
+								'category_name' => 'Novedades',
 								'posts_per_page' => 3,
 							)); 
 						?>
