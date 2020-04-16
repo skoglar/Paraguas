@@ -43,7 +43,7 @@ $container = get_theme_mod( 'paraguas_container_type' );
 						<?php 
 							// the query
 							$the_query = new WP_Query( array(
-								'category_name' => 'Novedades',
+								'category_name' => 'novedades',
 								'posts_per_page' => 3,
 							)); 
 						?>
@@ -88,7 +88,7 @@ $container = get_theme_mod( 'paraguas_container_type' );
 						<?php 
 							// the query
 							$the_query = new WP_Query( array(
-								'category_name' => 'Novedades',
+								'category_name' => 'novedades',
 								'posts_per_page' => 3,
 							)); 
 						?>
@@ -111,7 +111,7 @@ $container = get_theme_mod( 'paraguas_container_type' );
 						<?php 
 							// the query
 							$the_query = new WP_Query( array(
-								'category_name' => 'Destacados',
+								'category_name' => 'destacados',
 								'posts_per_page' => 3,
 							)); 
 						?>
@@ -134,7 +134,7 @@ $container = get_theme_mod( 'paraguas_container_type' );
 						<?php 
 							// the query
 							$the_query = new WP_Query( array(
-								'category_name' => 'Noticias',
+								'category_name' => 'noticias',
 								'posts_per_page' => 3,
 							)); 
 						?>
