@@ -111,7 +111,7 @@ $container = get_theme_mod( 'paraguas_container_type' );
 						<?php 
 							// the query
 							$the_query = new WP_Query( array(
-								'category_name' => 'gatitos',
+								'category_name' => 'Destacados',
 								'posts_per_page' => 3,
 							)); 
 						?>
@@ -134,7 +134,7 @@ $container = get_theme_mod( 'paraguas_container_type' );
 						<?php 
 							// the query
 							$the_query = new WP_Query( array(
-								'category_name' => 'dogitos',
+								'category_name' => 'Noticias',
 								'posts_per_page' => 3,
 							)); 
 						?>
