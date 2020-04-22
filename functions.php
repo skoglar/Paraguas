@@ -1,6 +1,6 @@
 <?php
 /**
- * Understrap functions and definitions
+ * Paraguas functions and definitions
  *
  * @package paraguas
  */
@@ -27,6 +27,7 @@ $paraguas_includes = array(
 	'/woocommerce.php',                     // Load WooCommerce functions.
 	'/editor.php',                          // Load Editor functions.
 	'/deprecated.php',                      // Load deprecated functions.
+	'/paraguas-customs.php',				// Load Custom Paraguas functions
 );
 
 foreach ( $paraguas_includes as $file ) {
@@ -36,3 +37,4 @@ foreach ( $paraguas_includes as $file ) {
 	}
 	require_once $filepath;
 }
+

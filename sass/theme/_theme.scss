@@ -69,3 +69,14 @@ nav .nav-link:hover{
 .seeme{
     background-color: $pastel-primary;
 }
+
+.tab-thumbnail{
+    max-width: 100%;
+    display: block;
+    padding: 0px;
+    margin: 0px;
+}
+
+.tab-box{
+    overflow: hidden;
+}

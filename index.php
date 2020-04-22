@@ -33,45 +33,18 @@ $container = get_theme_mod( 'paraguas_container_type' );
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 			<main class="site-main" id="main">
 				<!-- Carousel -->
-				<div id="carouselFadeExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+				<div id="carrusel-novedades" class="carousel slide carousel-fade" data-ride="carousel">
 					<!-- Carousel Items -->
 					<div class="carousel-inner" role="listbox">
 						<!-- Tag loop conditions -->
-						<?php 
-							// Get 3 posts tagged with Novedades
-							$the_query = new WP_Query( 
-								array(
-									'category_name' => 'novedades',
-									'posts_per_page' => 3,
-								)
-							); 
-						?>
-						<!-- Tag loop body -->
-						<?php if ( $the_query->have_posts() ) : ?>
-							<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-								<!-- Set the first post as active -->
-								<?php
-									if (0 == $the_query->current_post) {
-										echo '<div class="carousel-item active">';
-									} else {
-										echo '<div class="carousel-item">';
-									}
-								?>
-									<img class="d-block w-100" src="<?php the_post_thumbnail_url() ?>"  alt="<?php the_title(); ?>">
-								</div>
-								<?php $isFirst = False; ?>
-							<?php endwhile; ?>
-							<?php wp_reset_postdata(); ?>
-						<?php else : ?>
-							<p><?php echo 'No se encontraron posts (esto es temporal)'; ?></p>
-						<?php endif; ?>
+						<?php carousel_content_by_tag('novedades') ?>
 					</div>
 					<!-- Carousel Controls -->
-					<a class="carousel-control-prev" href="#carouselFadeExampleIndicators" role="button" data-slide="prev">
+					<a class="carousel-control-prev" href="#carrusel-novedades" role="button" data-slide="prev">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 						<span class="sr-only">Previous</span>
 					</a>
-					<a class="carousel-control-next" href="#carouselFadeExampleIndicators" role="button" data-slide="next">
+					<a class="carousel-control-next" href="#carrusel-novedades" role="button" data-slide="next">
 						<span class="carousel-control-next-icon" aria-hidden="true"></span>
 						<span class="sr-only">Next</span>
 					</a>
@@ -91,72 +64,19 @@ $container = get_theme_mod( 'paraguas_container_type' );
 			<div class="tab-content p-4">
 				<div id="novedades" class="p-2 tab-pane fade show active">
 					<h3>Novedades</h3>
-						<?php 
-							// the query
-							$the_query = new WP_Query( array(
-								'category_name' => 'novedades',
-								'posts_per_page' => 3,
-							)); 
-						?>
-
-						<?php if ( $the_query->have_posts() ) : ?>
-							<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-
-								<?php the_post_thumbnail(); ?>
-								<?php the_title(); ?>
-
-							<?php endwhile; ?>
-							<?php wp_reset_postdata(); ?>
-
-						<?php else : ?>
-							<p><?php echo 'No se encontraron posts (esto es temporal)'; ?></p>
-						<?php endif; ?>
+					<div class="d-flex text-white">
+						<?php tab_content_by_tag('novedades') ?>
 					</div>
-					<div id="destacados" class="p-2 tab-pane fade">
-						<h3>Destacados</h3>
-						<?php 
-							// the query
-							$the_query = new WP_Query( array(
-								'category_name' => 'destacados',
-								'posts_per_page' => 3,
-							)); 
-						?>
-
-						<?php if ( $the_query->have_posts() ) : ?>
-							<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-
-								<?php the_post_thumbnail(); ?>
-								<?php the_title(); ?>
-
-							<?php endwhile; ?>
-							<?php wp_reset_postdata(); ?>
-
-						<?php else : ?>
-							<p><?php echo 'No se encontraron posts (esto es temporal)'; ?></p>
-						<?php endif; ?>
+				</div>
+				<div id="destacados" class="p-2 tab-pane fade">
+					<div class="d-flex text-white">
+						<?php tab_content_by_tag('destacados') ?>
 					</div>
-					<div id="noticias" class="p-2 tab-pane fade">
-					<h3>Noticias</h3>
-						<?php 
-							// the query
-							$the_query = new WP_Query( array(
-								'category_name' => 'noticias',
-								'posts_per_page' => 3,
-							)); 
-						?>
-
-						<?php if ( $the_query->have_posts() ) : ?>
-							<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-
-								<?php the_post_thumbnail(); ?>
-								<?php the_title(); ?>
-
-							<?php endwhile; ?>
-							<?php wp_reset_postdata(); ?>
-
-						<?php else : ?>
-							<p><?php echo 'No se encontraron posts (esto es temporal)'; ?></p>
-						<?php endif; ?>
+				</div>
+				<div id="noticias" class="p-2 tab-pane fade">
+					<div class="d-flex text-white">
+						<?php tab_content_by_tag('noticias') ?>
+					</div>
 				</div>
 			</div>
 		<!-- /TABS -->
