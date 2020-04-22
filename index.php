@@ -31,41 +31,47 @@ $container = get_theme_mod( 'paraguas_container_type' );
 
 			<!-- Do the left sidebar check and opens the primary div -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
-
 			<main class="site-main" id="main">
-				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-					<ol class="carousel-indicators">
-						<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-						<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-						<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-					</ol>
-					<div class="carousel-inner">
+				<!-- Carousel -->
+				<div id="carouselFadeExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+					<!-- Carousel Items -->
+					<div class="carousel-inner" role="listbox">
+						<!-- Tag loop conditions -->
 						<?php 
-							// the query
-							$the_query = new WP_Query( array(
-								'category_name' => 'novedades',
-								'posts_per_page' => 3,
-							)); 
+							// Get 3 posts tagged with Novedades
+							$the_query = new WP_Query( 
+								array(
+									'category_name' => 'novedades',
+									'posts_per_page' => 3,
+								)
+							); 
 						?>
-
+						<!-- Tag loop body -->
 						<?php if ( $the_query->have_posts() ) : ?>
 							<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-								<div class="carousel-item active">
-								<img class="d-block w-100" src="<?php the_post_thumbnail_url(); ?>" alt="novedades">
+								<!-- Set the first post as active -->
+								<?php
+									if (0 == $the_query->current_post) {
+										echo '<div class="carousel-item active">';
+									} else {
+										echo '<div class="carousel-item">';
+									}
+								?>
+									<img class="d-block w-100" src="<?php the_post_thumbnail_url() ?>"  alt="<?php the_title(); ?>">
 								</div>
-								<a href="'.esc_url($featured_img_url).'" rel="lightbox">; 
+								<?php $isFirst = False; ?>
 							<?php endwhile; ?>
 							<?php wp_reset_postdata(); ?>
-
 						<?php else : ?>
 							<p><?php echo 'No se encontraron posts (esto es temporal)'; ?></p>
 						<?php endif; ?>
 					</div>
-					<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+					<!-- Carousel Controls -->
+					<a class="carousel-control-prev" href="#carouselFadeExampleIndicators" role="button" data-slide="prev">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 						<span class="sr-only">Previous</span>
 					</a>
-					<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+					<a class="carousel-control-next" href="#carouselFadeExampleIndicators" role="button" data-slide="next">
 						<span class="carousel-control-next-icon" aria-hidden="true"></span>
 						<span class="sr-only">Next</span>
 					</a>
