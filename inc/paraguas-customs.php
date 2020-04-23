@@ -9,16 +9,38 @@
         if ( $the_query->have_posts() ) :
             while ( $the_query->have_posts() ) : $the_query->the_post();
                 $post_link = get_permalink();
-                $post_title = substr(get_the_title(), 0, 25);
+                //$post_title = substr(get_the_title(), 0, 25);
+                $post_title = get_the_title();
                 $thumbnail_url = get_the_post_thumbnail_url();
                 $placeholder_thumb = 'https://images\.pexels\.com/photos/17739/pexels-photo\.jpg?auto=compress&cs=tinysrgb&h=750&w=1260';
-                
+                $excerpt = get_the_excerpt();
+                $excerpt = substr($excerpt, 0, 60);
+                if (strlen($post_title) > 35) 
+                {
+                    $post_title = wordwrap($post_title, 35);
+                    $post_title = substr($post_title, 0, strpos($post_title, "\n"));
+                }
                 echo <<<POSTS
+                <!--
                     <div class="flex-fill tab-box">
-                        <a href={$post_link}>{$post_title}</a><br>
-                        <a href={$post_link}>
-                            <img class="tab-thumbnail" src={$thumbnail_url} alt=the_title()>
-                        </a>
+                        <div class="thumbnail-container">
+                            <a href={$post_link}>
+                                <img class="tab-thumbnail" src={$thumbnail_url} alt=the_title()>
+                            </a>
+                            <a class="centered p-2" href={$post_link}>{$post_title}</a><br>
+                        </div>
+                    </div>
+                    -->
+                    <div class="card">
+                        <div class="card-body">
+                            <a class="card-title" href={$post_link}>{$post_title}</a>
+                        </div>
+                        <img class="tab-thumbnail" src="{$thumbnail_url}" alt="Card image">
+                        <div class="card-body">
+                            <div class="container">
+                                <p class="card-text">{$excerpt}</p>
+                            </div>
+                        </div>
                     </div>
                 POSTS;
             endwhile;

@@ -45,19 +45,25 @@ nav .nav-link:hover{
 }
 
 .showcase-tabs{
-    padding: 10px;
+    padding: 3px;
     display: flex;
     flex-flow: row wrap;
-    //justify-content: space-between;
+    //align-content: space-around;
+    justify-content: space-around;
     background-color: $secondary;
     height: 55px;
+    padding-left: 20%;    
+    padding-right: 20%;
 }
 
 .infotab{
+    display: block;
     font-family: 'Arsenal';
     font-weight: 500;
     font-size: 20px;
-    width: 300px;
+    text-align: center;
+    width: 180px!important;
+    max-width: 180px;
     background-color: $secondary;
     color: $white;
 }
@@ -70,13 +76,64 @@ nav .nav-link:hover{
     background-color: $pastel-primary;
 }
 
+.tab-content{
+    
+}
+
 .tab-thumbnail{
-    max-width: 100%;
-    display: block;
-    padding: 0px;
-    margin: 0px;
+    object-fit: cover;
+    padding: 0;
+    margin: 0;
+    //opacity: .7;
+    height: 100%;
+    width: auto;
+    overflow: hidden;
 }
 
 .tab-box{
     overflow: hidden;
+}
+
+.thumbnail-container {
+  display: block;
+  position: relative;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+}
+
+.centered {
+  position: absolute;
+  background-color: $primary-semi;
+  color: $white;
+  font-weight: 500;
+  bottom: 0%;
+  left: 0%;
+  width: 100%;
+  max-height: 20%;
+  min-height: 20%;
+  overflow: hidden;
+}
+
+.card{
+    margin: 20px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color:$white;
+    height: 400px;
+    box-shadow: 0px 1px 3px rgba(0,0,0,.08) !important;
+}
+
+.card-title{
+    text-align: center;
+}
+
+.card-text{
+    font-weight: 360;
+    color: $secondary;
+}
+
+.card-body{
+    display: flex;
+    justify-content: center;
 }
