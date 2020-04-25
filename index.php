@@ -34,13 +34,15 @@ $container = get_theme_mod( 'paraguas_container_type' );
 
 			<main class="site-main" id="main">
 				<?php
-					$the_query = new WP_Query( array(
-						'category_name' => 'blog',
-						'posts_per_page' => 5,
-					)); 
+					$the_query = new WP_Query( 
+						array(
+							'category_name' => 'blog',
+							'posts_per_page' => 5,
+						)
+					); 
 				?>
 				<?php if ( $the_query->have_posts() ) : ?>
-            		<? while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+            		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
 						<?php
 
