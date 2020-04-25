@@ -29,64 +29,36 @@ $container = get_theme_mod( 'paraguas_container_type' );
 
 		<div class="row">
 
-			<!-- Do the left sidebar check and opens the primary div -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
-			<main class="site-main" id="main">
-				<!-- Carousel -->
-				<div id="carrusel-novedades" class="carousel slide carousel-fade" data-ride="carousel">
-					<!-- Carousel Items -->
-					<div class="carousel-inner" role="listbox">
-						<!-- Tag loop conditions -->
-						<?php carousel_content_by_tag('novedades') ?>
-					</div>
-					<!-- Carousel Controls -->
-					<a class="carousel-control-prev" href="#carrusel-novedades" role="button" data-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="sr-only">Previous</span>
-					</a>
-					<a class="carousel-control-next" href="#carrusel-novedades" role="button" data-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="sr-only">Next</span>
-					</a>
-				</div>
-			</main><!-- #main -->
-			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
+				<?php if ( have_posts() ) : ?>
 
-		</div><!-- .row -->
-		<!-- Tabs for personalized content -->
-		<div class="container showcase">
-			<ul class="nav showcase-tabs">
-				<li><a class="p-2 infotab active" data-toggle="pill" href="#novedades">Novedades</a></li>
-				<li><a class="p-2 infotab" data-toggle="pill" href="#destacados">Destacados</a></li>
-				<li><a class="p-2 infotab" data-toggle="pill" href="#noticias">Noticias</a></li>
-			</ul>
-			<div class="tab-content p-4">
-				<div id="novedades" class="p-2 tab-pane fade show active">
-					<h3>Novedades</h3>
-					<div class="d-flex text-white">
-						<?php tab_content_by_tag('novedades') ?>
-					</div>
-				</div>
-				<div id="destacados" class="p-2 tab-pane fade">
-					<div class="d-flex text-white">
-						<?php tab_content_by_tag('destacados') ?>
-					</div>
-				</div>
-				<div id="noticias" class="p-2 tab-pane fade">
-					<div class="d-flex text-white">
-						<?php tab_content_by_tag('noticias') ?>
-					</div>
-				</div>
-			</div>
-		<!-- /TABS -->
-		<div class="seeme">
+					<?php /* Start the Loop */ ?>
 
+					<?php while ( have_posts() ) : the_post(); ?>
+
+						<?php
+
+						/*
+						 * Include the Post-Format-specific template for the content.
+						 * If you want to override this in a child theme, then include a file
+						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+						 */
+						get_template_part( 'loop-templates/content', get_post_format() );
+						?>
+
+					<?php endwhile; ?>
+
+				<?php else : ?>
+
+					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
+
+				<?php endif; ?>
+
+
+			<!-- The pagination component -->
+			<?php paraguas_pagination(); ?>
 		</div>
-		</div>
-		<?php 
-			echo do_shortcode('[instagram-feed]');
-		?>
+
+
 	</div><!-- #content -->
 
 </div><!-- #index-wrapper -->
