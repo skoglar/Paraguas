@@ -137,3 +137,29 @@ nav .nav-link:hover{
     display: flex;
     justify-content: center;
 }
+
+.btn-secondary{
+    background-color: $pastel-primary;
+    border-color: $pastel-primary;
+    font-family: 'Arsenal';
+    font-size: smaller;
+    font-weight: 600;
+}
+
+.thumb-box{
+    display: block;
+    width: 200px;
+    height: 200px;
+    min-width: 200px;
+}
+
+.blog-thumbnail{
+    display: block;
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+
+.blog-excerpt{
+    padding: 20px;
+}

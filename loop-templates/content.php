@@ -7,7 +7,10 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
+
 ?>
+
+
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
@@ -29,26 +32,26 @@ defined( 'ABSPATH' ) || exit;
 		<?php endif; ?>
 
 	</header><!-- .entry-header -->
+	<div class="d-flex flex-row">
+		<div class="thumb-box">
+			<img class="blog-thumbnail" src="<?php echo get_the_post_thumbnail_url( $post->ID, 'large' ); ?>"  alt="{$post_title}">
+		</div>
+		<div class="entry-content blog-excerpt">
+			<?php the_excerpt(); ?>
+			<?php
+			wp_link_pages(
+				array(
+					'before' => '<div class="page-links">' . __( 'Pages:', 'paraguas' ),
+					'after'  => '</div>',
+				)
+			);
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+			?>
+		</div><!-- .entry-content -->
+	</div>
 
-	<div class="entry-content">
-
-		<?php the_excerpt(); ?>
-
-		<?php
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'paraguas' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-
-	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-
 		<?php paraguas_entry_footer(); ?>
 
 	</footer><!-- .entry-footer -->

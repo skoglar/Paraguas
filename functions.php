@@ -198,4 +198,5 @@ class sm_texto {
 }
 
 new sm_texto();
+
 ?>
