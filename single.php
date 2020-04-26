@@ -24,7 +24,7 @@ $container = get_theme_mod( 'paraguas_container_type' );
 			<main class="site-main" id="main">
 
 				<?php while ( have_posts() ) : the_post(); ?>
-
+					
 					<?php get_template_part( 'loop-templates/content', 'single' ); ?>
 
 					<?php paraguas_post_nav(); ?>
