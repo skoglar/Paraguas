@@ -75,13 +75,13 @@ $container = get_theme_mod( 'paraguas_container_type' );
 				</div>
 			</div>
 		<!-- /TABS -->
+		<?php 
+			echo do_shortcode('[instagram-feed]');
+		?>
 		</main><!-- #main -->
 
 		</div>
 		</div>
-		<?php 
-			echo do_shortcode('[instagram-feed]');
-			?>
 	</div><!-- #content -->
 
 </div><!-- #index-wrapper -->
