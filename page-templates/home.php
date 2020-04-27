@@ -23,11 +23,11 @@ $container = get_theme_mod( 'paraguas_container_type' );
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
+			<main class="site-main" id="main">
 		<div class="row">
 
 			<!-- Do the left sidebar check and opens the primary div -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
-			<main class="site-main" id="main">
 				<!-- Carousel -->
 				<div id="carrusel-novedades" class="carousel slide carousel-fade" data-ride="carousel">
 					<!-- Carousel Items -->
@@ -45,7 +45,6 @@ $container = get_theme_mod( 'paraguas_container_type' );
 						<span class="sr-only">Next</span>
 					</a>
 				</div>
-			</main><!-- #main -->
 			<!-- Do the right sidebar check -->
 			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
 
@@ -76,13 +75,13 @@ $container = get_theme_mod( 'paraguas_container_type' );
 				</div>
 			</div>
 		<!-- /TABS -->
-		<div class="seeme">
+		</main><!-- #main -->
 
 		</div>
 		</div>
 		<?php 
 			echo do_shortcode('[instagram-feed]');
-		?>
+			?>
 	</div><!-- #content -->
 
 </div><!-- #index-wrapper -->
