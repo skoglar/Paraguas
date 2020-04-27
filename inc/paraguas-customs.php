@@ -15,11 +15,11 @@
                 $placeholder_thumb = 'https://images\.pexels\.com/photos/17739/pexels-photo\.jpg?auto=compress&cs=tinysrgb&h=750&w=1260';
                 $excerpt = get_the_excerpt();
                 $excerpt = substr($excerpt, 0, 60);
-                if (strlen($post_title) > 35) 
-                {
-                    $post_title = wordwrap($post_title, 35);
-                    $post_title = substr($post_title, 0, strpos($post_title, "\n"));
-                }
+                // if (strlen($post_title) > 35) 
+                // {
+                //     $post_title = wordwrap($post_title, 35);
+                //     $post_title = substr($post_title, 0, strpos($post_title, "\n"));
+                // }
                 echo <<<POSTS
                 <!--
                     <div class="flex-fill tab-box">
