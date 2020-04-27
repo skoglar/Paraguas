@@ -8,7 +8,8 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 ?>
-
+<!-- Do the left sidebar check and opens the primary div -->
+<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 	<header class="entry-header">
