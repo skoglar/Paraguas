@@ -26,8 +26,7 @@ $container = get_theme_mod( 'paraguas_container_type' );
 			<main class="site-main" id="main">
 		<div class="row">
 
-			<!-- Do the left sidebar check and opens the primary div -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+
 				<!-- Carousel -->
 				<div id="carrusel-novedades" class="carousel slide carousel-fade" data-ride="carousel">
 					<!-- Carousel Items -->
@@ -46,7 +45,7 @@ $container = get_theme_mod( 'paraguas_container_type' );
 					</a>
 				</div>
 			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
+			
 
 		</div><!-- .row -->
 		<!-- Tabs for personalized content -->
