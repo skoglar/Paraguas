@@ -14,8 +14,9 @@ defined( 'ABSPATH' ) || exit;
 
 	<header class="entry-header">
 
+    <!-- Hide the title
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
+    -->
 	</header><!-- .entry-header -->
 
 	<!-- Hide the thumbnail
