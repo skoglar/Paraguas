@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Right Sidebar Layout
+ * Template Name: Barra a la derecha
  *
  * This template can be used to override the default template and sidebar setup
  *
