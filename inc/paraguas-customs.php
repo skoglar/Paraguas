@@ -82,7 +82,7 @@
                 }
                 echo <<<DIVBODY
                 <div class="{$div_classes}">
-                    <img class="d-block w-100" src="${thumbnail_url}"  alt="{$post_title}">
+                    <img class="d-block carousel-image" src="${thumbnail_url}"  alt="{$post_title}">
                 </div>
                 DIVBODY;
             endwhile;
@@ -93,7 +93,7 @@
 
             echo <<<DIVBODY
             <div class="carousel-item active">
-                <img class="d-block w-100" src="https://images.pexels.com/photos/17739/pexels-photo.jpg"  alt="{$post_title}">
+                <img class="d-block carousel-image" src="https://images.pexels.com/photos/17739/pexels-photo.jpg"  alt="{$post_title}">
             </div>
             DIVBODY;
         endif;

@@ -2,6 +2,7 @@
 
 body {
     padding-top: 8.5vh;
+    height: 100%;
 }
 
 .navbar{
@@ -80,7 +81,7 @@ nav .nav-link:hover{
 }
 
 .tab-content{
-    
+    width: 100%;
 }
 
 .tab-thumbnail{
@@ -116,6 +117,10 @@ nav .nav-link:hover{
   max-height: 20%;
   min-height: 20%;
   overflow: hidden;
+}
+
+.carousel-image{
+    width: 100%;
 }
 
 .card{
