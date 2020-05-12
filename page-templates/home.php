@@ -25,8 +25,6 @@ $container = get_theme_mod( 'paraguas_container_type' );
 
 			<main class="site-main" id="main">
 		<div class="row">
-
-
 				<!-- Carousel -->
 				<div id="carrusel-novedades" class="carousel slide carousel-fade" data-ride="carousel">
 					<!-- Carousel Items -->
