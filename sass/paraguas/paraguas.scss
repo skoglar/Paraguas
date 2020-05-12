@@ -1,6 +1,7 @@
 // Some basic padding for all wrappers
 .wrapper {
-  padding: $grid-gutter-width 0; }
+  padding: $grid-gutter-width 0; 
+}
 
 // Reset hero wrapper padding to 0
 #wrapper-hero { padding: 0px !important; }
@@ -13,11 +14,11 @@
 }
 
 // Separate sticky wrapper from main content
-.wrapper#wrapper-sticky { border-bottom: 1px solid $gray-300; }
+.wrapper#wrapper-sticky { border-bottom: 1px solid $gray; }
 
 // Adding some contrast background color to footer full widget
 #wrapper-footer-full,
-#wrapper-static-hero { background-color: $gray-200; }
+#wrapper-static-hero { background-color: $gray; }
 
 // Necessary WP classes
 .wp-caption { font-size: inherit; }
