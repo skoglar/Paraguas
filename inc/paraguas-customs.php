@@ -37,7 +37,7 @@
                         </div>
                         <img class="tab-thumbnail" src="{$thumbnail_url}" alt="Card image">
                         <div class="card-body">
-                            <div class="container">
+                            <div class="card-body-container">
                                 <p class="card-text">{$excerpt}</p>
                             </div>
                         </div>
