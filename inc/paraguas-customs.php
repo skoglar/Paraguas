@@ -21,27 +21,17 @@
                 //     $post_title = substr($post_title, 0, strpos($post_title, "\n"));
                 // }
                 echo <<<POSTS
-                <!--
-                    <div class="flex-fill tab-box">
-                        <div class="thumbnail-container">
-                            <a href={$post_link}>
-                                <img class="tab-thumbnail" src={$thumbnail_url} alt=the_title()>
-                            </a>
-                            <a class="centered p-2" href={$post_link}>{$post_title}</a><br>
+                <div class="card showcase-card">
+                    <div class="card-body">
+                        <a class="card-title" href={$post_link}>{$post_title}</a>
+                    </div>
+                    <img class="tab-thumbnail" src="{$thumbnail_url}" alt="Card image">
+                    <div class="card-body">
+                        <div class="card-body-container">
+                            <p class="card-text">{$excerpt}</p>
                         </div>
                     </div>
-                    -->
-                    <div class="card">
-                        <div class="card-body">
-                            <a class="card-title" href={$post_link}>{$post_title}</a>
-                        </div>
-                        <img class="tab-thumbnail" src="{$thumbnail_url}" alt="Card image">
-                        <div class="card-body">
-                            <div class="card-body-container">
-                                <p class="card-text">{$excerpt}</p>
-                            </div>
-                        </div>
-                    </div>
+                </div>
                 POSTS;
             endwhile;
             wp_reset_postdata();
