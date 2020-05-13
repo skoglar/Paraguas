@@ -60,12 +60,12 @@ $container = get_theme_mod( 'paraguas_container_type' );
 					</div>
 				</div>
 				<div id="destacados" class="p-2 tab-pane fade">
-					<div class="d-flex text-white">
+					<div class="d-flex text-white justify-content-center flex-wrap">
 						<?php tab_content_by_tag('destacados') ?>
 					</div>
 				</div>
 				<div id="noticias" class="p-2 tab-pane fade">
-					<div class="d-flex text-white">
+					<div class="d-flex text-white justify-content-center flex-wrap">
 						<?php tab_content_by_tag('noticias') ?>
 					</div>
 				</div>
