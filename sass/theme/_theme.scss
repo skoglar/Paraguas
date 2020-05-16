@@ -17,7 +17,7 @@ body {
 
 .container{
     outline: none;
-    //width: 55%;
+    min-width: 60vw;
 }
 
 .custom-logo-link .img-fluid{
@@ -126,6 +126,10 @@ nav .nav-link:hover{
   max-height: 20%;
   min-height: 20%;
   overflow: hidden;
+}
+
+.carrusel{
+    max-height: 30vh;
 }
 
 .carousel-image{
