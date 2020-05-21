@@ -56,7 +56,7 @@ $container = get_theme_mod( 'paraguas_container_type' );
 			<div class="tab-content p-4">
 				<div id="novedades" class="p-2 tab-pane fade show active">
 					<div class="d-flex text-white justify-content-center flex-wrap">
-						<?php tab_content_by_type('texto') ?>
+						<?php tab_content_by_type('sm_texto') ?>
 					</div>
 				</div>
 				<div id="destacados" class="p-2 tab-pane fade">
