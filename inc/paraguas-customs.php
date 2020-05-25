@@ -28,7 +28,7 @@
                     <img class="tab-thumbnail" src="{$thumbnail_url}" alt="Card image">
                     <div class="card-body">
                         <div class="card-body-container">
-                            <p class="card-text">{$excerpt}</p>
+                            <!-- <p class="card-text">{$excerpt}</p> -->
                         </div>
                     </div>
                 </div>
@@ -73,12 +73,12 @@
                 echo <<<POSTS
                 <div class="card showcase-card">
                     <div class="card-body">
-                        <a class="card-title" href={$post_link}>{$post_title}</a>
                     </div>
-                    <img class="tab-thumbnail" src="{$thumbnail_url}" alt="Card image">
+                    <a class="card-title" href={$post_link}>
+                        <img class="tab-thumbnail" src="{$thumbnail_url}" alt="Card image">
+                    </a>
                     <div class="card-body">
                         <div class="card-body-container">
-                            <p class="card-text">{$excerpt}</p>
                         </div>
                     </div>
                 </div>
