@@ -71,9 +71,14 @@ $container = get_theme_mod( 'paraguas_container_type' );
 				</div>
 			</div>
 		<!-- /TABS -->
-		<?php 
-			echo do_shortcode('[instagram-feed]');
-		?>
+		<div class="separador">
+			<img class="paraguitas" src="http://manret.dreamhosters.com/wp-content/uploads/2020/04/logo-editorial_1-1.png" >
+		</div>
+		<div>
+			<?php 
+				echo do_shortcode('[instagram-feed]');
+			?>
+		</div>
 		</main><!-- #main -->
 
 		</div>
