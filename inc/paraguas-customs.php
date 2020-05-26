@@ -73,7 +73,7 @@
                 //     $post_title = substr($post_title, 0, strpos($post_title, "\n"));
                 // }
                 echo <<<POSTS
-                <div class="card showcase-card">
+                <div class="card showcase-card portada-card">
                     <div class="card-body">
                     </div>
                     <a class="card-title" href={$post_link}>
