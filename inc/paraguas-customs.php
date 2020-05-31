@@ -139,4 +139,32 @@
             DIVBODY;
         endif;
     }
+
+    function carousel_content_by_option(){
+        $first = true;
+        $div_classes = 'carousel-item active';
+        
+        foreach (range(1, 3) as $number) {
+            $img = get_theme_mod( 'paraguas_carousel_img_' . $number );
+            $img_url = wp_get_attachment_url($img);
+            $link = get_theme_mod( 'paraguas_carousel_img_link_' . $number );
+            if ($link == 'None') {
+                $link = '#';
+            }
+
+            if ($img != null) {
+                echo <<<DIVBODY
+                <div class="{$div_classes}">
+                    <a href="{$link}">
+                        <img class="d-block carousel-image" src="{$img_url}"  alt="{$post_title}">
+                    </a>
+                </div>
+                DIVBODY;
+                if($first) {
+                    $div_classes = 'carousel-item';
+                    $first = false;
+                }
+            }
+        }
+    }
 ?>

@@ -30,7 +30,7 @@ $container = get_theme_mod( 'paraguas_container_type' );
 					<!-- Carousel Items -->
 					<div class="carousel-inner" role="listbox">
 						<!-- Tag loop conditions -->
-						<?php carousel_content_by_tag('novedades') ?>
+						<?php carousel_content_by_option() ?>
 					</div>
 					<!-- Carousel Controls -->
 					<a class="carousel-control-prev" href="#carrusel-novedades" role="button" data-slide="prev">

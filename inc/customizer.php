@@ -46,6 +46,16 @@ if ( ! function_exists( 'paraguas_theme_customize_register' ) ) {
 			)
 		);
 
+		$wp_customize->add_section(
+			'paraguas_carousel_options',
+			array(
+				'title'       => __( 'Carousel Options', 'paraguas' ),
+				'capability'  => 'edit_theme_options',
+				'description' => __( 'Carousel banners', 'paraguas' ),
+				'priority'    => 160,
+			)
+		);
+
 		/**
 		 * Select sanitization function
 		 *
@@ -94,7 +104,55 @@ if ( ! function_exists( 'paraguas_theme_customize_register' ) ) {
 				)
 			)
 		);
+		foreach (range(1, 3) as $number) {
+			$wp_customize->add_setting(
+				'paraguas_carousel_img_' . $number,
+				array(
+					'default'           => null,
+					'type'              => 'theme_mod',
+					'capability'        => 'edit_theme_options',
+				)
+			);
 
+			$wp_customize->add_control(
+				new WP_Customize_Media_Control(
+					$wp_customize,
+					'paraguas_carousel_img_' . $number,
+					array(
+						'label'       => __( 'Banner_' . $number, 'paraguas' ),
+						'description' => __( 'Elige las imagenes del carrusel', 'paraguas' ),
+						'section'     => 'paraguas_carousel_options',
+						'settings'    => 'paraguas_carousel_img_' . $number,
+						'mime-type'   => 'image',
+						'priority'    => '10',
+					)
+				)
+			);
+
+			$wp_customize->add_setting(
+				'paraguas_carousel_img_link_' . $number,
+				array(
+					'default'           => 'None',
+					'type'              => 'theme_mod',
+					'capability'        => 'edit_theme_options',
+				)
+			);
+
+			$wp_customize->add_control(
+				new WP_Customize_Control(
+					$wp_customize,
+					'paraguas_carousel_img_link_' . $number,
+					array(
+						'label'       => __( 'Link_' . $number, 'paraguas' ),
+						'description' => __( '¿A donde lleva esta imagen?', 'paraguas' ),
+						'section'     => 'paraguas_carousel_options',
+						'settings'    => 'paraguas_carousel_img_link_' . $number,
+						'type'        => 'url',
+						'priority'    => '10',
+					)
+				)
+			);
+		};
 		$wp_customize->add_setting(
 			'paraguas_sidebar_position',
 			array(
