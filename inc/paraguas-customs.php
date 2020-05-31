@@ -74,15 +74,9 @@
                 // }
                 echo <<<POSTS
                 <div class="card showcase-card portada-card">
-                    <div class="card-body">
-                    </div>
-                    <a class="card-title" href={$post_link}>
+                    <a href={$post_link}>
                         <img class="tab-thumbnail" src="{$thumbnail_url}" alt="Card image">
                     </a>
-                    <div class="card-body">
-                        <div class="card-body-container">
-                        </div>
-                    </div>
                 </div>
                 POSTS;
             endwhile;
@@ -143,7 +137,7 @@
     function carousel_content_by_option(){
         $first = true;
         $div_classes = 'carousel-item active';
-        
+
         foreach (range(1, 3) as $number) {
             $img = get_theme_mod( 'paraguas_carousel_img_' . $number );
             $img_url = wp_get_attachment_url($img);
