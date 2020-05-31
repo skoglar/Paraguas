@@ -28,6 +28,14 @@ defined( 'ABSPATH' ) || exit;
 	<!-- .entry-header -->
 	<div class="d-flex flex-row">
 		<div class="thumb-box">
+			<div class="mobile-post-title">
+				<?php
+					the_title(
+					sprintf( '<h4 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+					'</a></h3>'
+					);
+				?>
+			</div>
 			<img class="blog-thumbnail" src="<?php echo get_the_post_thumbnail_url( $post->ID, 'large' ); ?>"  alt="{$post_title}">
 		</div>
 		<div class="entry-content blog-excerpt">

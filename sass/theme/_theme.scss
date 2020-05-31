@@ -215,3 +215,15 @@ nav .nav-link:hover{
 .instagram-feed{
     padding-top: 4.5vh;
 }
+
+@media screen and (max-width: 600px) {
+  .blog-excerpt {
+    display: none;
+  }
+  .d-flex{
+    margin-left: 10vw;
+  }
+  .mobile-post-title {
+    display: block;
+  }
+}
