@@ -31,8 +31,8 @@ defined( 'ABSPATH' ) || exit;
 			<div class="mobile-post-title">
 				<?php
 					the_title(
-					sprintf( '<h4 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
-					'</a></h3>'
+						sprintf( '<h4 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+						'</a></h3>'
 					);
 				?>
 			</div>

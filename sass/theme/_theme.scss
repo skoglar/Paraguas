@@ -216,6 +216,10 @@ nav .nav-link:hover{
     padding-top: 4.5vh;
 }
 
+.mobile-post-title {
+    display: none;
+}
+
 @media screen and (max-width: 600px) {
   .blog-excerpt {
     display: none;
