@@ -35,7 +35,7 @@ $container = get_theme_mod( 'paraguas_container_type' );
 							<i class="fa fa-facebook fa-lg"></i>&nbsp;
 						</a>
 						<a href=""></a>
-						<a href="mailto:contacto@invertidoediciones.cl">
+						<a href="mailto:invertidoediciones@gmail.com">
 							<i class="fa fa-envelope fa-lg"></i>
 						</a>
 					</div>
