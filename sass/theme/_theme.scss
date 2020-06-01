@@ -240,6 +240,11 @@ nav .nav-link:hover{
     display: none;
 }
 
+
+.entry-title-mobile{
+    font-size: 1em;
+}
+
 .post-index-row{
     margin: 10px;
 }
@@ -254,6 +259,7 @@ nav .nav-link:hover{
   }
 
   .mobile-post-excerpt {
+    max-width: 200px;
     display: block;
     margin: 10px;
     margin-bottom: 50px;

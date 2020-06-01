@@ -18,7 +18,9 @@ defined( 'ABSPATH' ) || exit;
 		<!-- desktop layout -->
 		<div class="d-flex flex-row post-index-row">
 			<div class="thumb-box">
-				<img class="blog-thumbnail" src="<?php echo get_the_post_thumbnail_url( $post->ID, 'large' ); ?>"  alt="{$post_title}">
+				<a href="<?php echo get_permalink(); ?>">
+					<img class="blog-thumbnail" src="<?php echo get_the_post_thumbnail_url( $post->ID, 'large' ); ?>"  alt="{$post_title}">
+				</a>
 			</div>
 			<div class="entry-content blog-excerpt">
 				<?php
@@ -27,7 +29,7 @@ defined( 'ABSPATH' ) || exit;
 						'</a></h3>'
 					);
 				?>
-				<?php short_excerpt(); ?>
+				<?php short_excerpt(220); ?>
 				<?php
 					wp_link_pages(
 						array(
@@ -43,11 +45,11 @@ defined( 'ABSPATH' ) || exit;
 		<div class="mobile-post-excerpt">
 			<?php
 				the_title(
-					sprintf( '<h4 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+					sprintf( '<h4 class="entry-title-mobile"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
 					'</a></h4>'
 				);
 
-				short_excerpt(30);
+				short_excerpt(50);
 			?>
 		</div>
 	</div>
