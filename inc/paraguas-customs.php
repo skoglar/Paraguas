@@ -161,4 +161,13 @@
             }
         }
     }
+
+    function short_excerpt($max_length = 160){
+        $excerpt = get_the_excerpt();
+        if (preg_match('/^.{1,'.$max_length.'}\b/s', $excerpt, $match))
+        {
+            $line=$match[0];
+        }
+        echo $line . ' [...]';
+    }
 ?>

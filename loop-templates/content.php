@@ -13,57 +13,42 @@ defined( 'ABSPATH' ) || exit;
 
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-
-	<!-- <header class="entry-header">
-
-		<?php if ( 'post' == get_post_type() ) : ?>
-
-			<div class="entry-meta">
-				<?php paraguas_posted_on(); ?>
-			</div>
-
-		<?php endif; ?>
-
-	</header> -->
 	<!-- .entry-header -->
-	<div class="d-flex flex-row">
-		<div class="thumb-box">
-			<div class="mobile-post-title">
+	<div class="d-flex flex-column">
+		<!-- desktop layout -->
+		<div class="d-flex flex-row post-index-row">
+			<div class="thumb-box">
+				<img class="blog-thumbnail" src="<?php echo get_the_post_thumbnail_url( $post->ID, 'large' ); ?>"  alt="{$post_title}">
+			</div>
+			<div class="entry-content blog-excerpt">
 				<?php
 					the_title(
-						sprintf( '<h4 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+						sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
 						'</a></h3>'
 					);
 				?>
+				<?php short_excerpt(); ?>
+				<?php
+					wp_link_pages(
+						array(
+							'before' => '<div class="page-links">' . __( 'Pages:', 'paraguas' ),
+							'after'  => '</div>',
+						)
+					);
+
+				?>
 			</div>
-			<img class="blog-thumbnail" src="<?php echo get_the_post_thumbnail_url( $post->ID, 'large' ); ?>"  alt="{$post_title}">
 		</div>
-		<div class="entry-content blog-excerpt">
-		<?php
-			the_title(
-				sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
-				'</a></h3>'
-			);
-		?>
-			<?php the_excerpt(); ?>
+		<!-- mobile layout -->
+		<div class="mobile-post-excerpt">
 			<?php
-			wp_link_pages(
-				array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'paraguas' ),
-					'after'  => '</div>',
-				)
-			);
+				the_title(
+					sprintf( '<h4 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+					'</a></h4>'
+				);
 
+				short_excerpt(30);
 			?>
-		</div><!-- .entry-content -->
+		</div>
 	</div>
-
-	<!--
-	<footer class="entry-footer">
-		<?php paraguas_entry_footer(); ?>
-
-	</footer>
-	-->
-	<!-- .entry-footer -->
-
 </article><!-- #post-## -->

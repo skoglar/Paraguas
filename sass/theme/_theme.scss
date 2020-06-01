@@ -236,14 +236,27 @@ nav .nav-link:hover{
     text-decoration: none;
 }
 
+.mobile-post-excerpt {
+    display: none;
+}
+
+.post-index-row{
+    margin: 10px;
+}
+
 @media screen and (max-width: 600px) {
+  #index-wrapper{
+    margin-left: 5vw;
+  }
+
   .blog-excerpt {
     display: none;
   }
-  // .d-flex{
-  //   margin-left: 10vw;
-  // }
-  .mobile-post-title {
+
+  .mobile-post-excerpt {
     display: block;
+    margin: 10px;
+    margin-bottom: 50px;
+
   }
 }
