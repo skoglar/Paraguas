@@ -12,7 +12,7 @@
                 //$post_title = substr(get_the_title(), 0, 25);
                 $post_title = get_the_title();
                 $thumbnail_url = get_the_post_thumbnail_url();
-                $placeholder_thumb = 'https://images\.pexels\.com/photos/17739/pexels-photo\.jpg?auto=compress&cs=tinysrgb&h=750&w=1260';
+                $placeholder_thumb = 'https://images\.pexels\.com/photos/17739/pexels-photo\.jpg?auto=compress&cs=tinysrgb&h=400&w=400';
                 $excerpt = get_the_excerpt();
                 $excerpt = substr($excerpt, 0, 60);
                 // if (strlen($post_title) > 35) 
@@ -38,7 +38,7 @@
             endwhile;
             wp_reset_postdata();
         else :
-            $placeholder_thumb = 'https://images.pexels.com/photos/17739/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=750&w=1260';
+            $placeholder_thumb = 'https://images.pexels.com/photos/17739/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=400&w=400';
             for ($i=0; $i < 3; $i++) { 
                 echo <<<POSTS
                 <div class="flex-fill tab-box">
@@ -64,7 +64,7 @@
                 //$post_title = substr(get_the_title(), 0, 25);
                 $post_title = get_the_title();
                 $thumbnail_url = get_the_post_thumbnail_url();
-                $placeholder_thumb = 'https://images\.pexels\.com/photos/17739/pexels-photo\.jpg?auto=compress&cs=tinysrgb&h=750&w=1260';
+                $placeholder_thumb = 'https://images\.pexels\.com/photos/17739/pexels-photo\.jpg?auto=compress&cs=tinysrgb&h=400&w=400';
                 $excerpt = get_the_excerpt();
                 $excerpt = substr($excerpt, 0, 60);
                 // if (strlen($post_title) > 35) 
@@ -82,7 +82,7 @@
             endwhile;
             wp_reset_postdata();
         else :
-            $placeholder_thumb = 'https://images.pexels.com/photos/17739/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=750&w=1260';
+            $placeholder_thumb = 'https://images.pexels.com/photos/17739/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=400&w=400';
             for ($i=0; $i < 3; $i++) { 
                 echo <<<POSTS
                 <div class="flex-fill tab-box">
