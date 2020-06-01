@@ -245,7 +245,10 @@ nav .nav-link:hover{
 }
 
 @media screen and (max-width: 600px) {
-
+  .category-blog{
+    margin-left: 6vw; 
+  }
+  
   .blog-excerpt {
     display: none;
   }
