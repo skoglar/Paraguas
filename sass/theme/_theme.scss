@@ -223,6 +223,10 @@ nav .nav-link:hover{
     padding-top: 4.5vh;
 }
 
+.site-contact a:hover{
+    text-decoration: none;
+}
+
 @media screen and (max-width: 600px) {
   .blog-excerpt {
     display: none;
