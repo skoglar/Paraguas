@@ -25,7 +25,7 @@ $container = get_theme_mod( 'paraguas_container_type' );
 
 				<footer class="site-footer d-flex justify-content-between" id="colophon">
 					<div class="site-info align-self-start">
-						Editorial Invertido <i class="fa fa-copyright"></i> &mdash; 2020 &mdash; <a href="mailto:contacto@invertidoediciones.cl">contacto@invertidoediciones.cl</a>
+						<i class="fa fa-copyright"></i>&nbsp;2020&nbsp;Invertido Ediciones 
 					</div><!-- .site-info -->
 					<div class="site-contact align-self-end">
 						<a href="https://www.instagram.com/invertidoediciones/">
