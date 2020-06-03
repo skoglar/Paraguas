@@ -31,7 +31,7 @@ $container = get_theme_mod( 'paraguas_container_type' );
 						<a href="https://www.instagram.com/invertidoediciones/">
 							<i class="fa fa-instagram fa-lg"></i>&nbsp;
 						</a>
-						<a href="https://www.facebook.com/Invertido-Ediciones-1118203675051290/">
+						<a href="https://www.facebook.com/invertidoediciones/">
 							<i class="fa fa-facebook fa-lg"></i>&nbsp;
 						</a>
 						<a href=""></a>
