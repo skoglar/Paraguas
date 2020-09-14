@@ -263,6 +263,10 @@ nav .nav-link:hover{
     z-index: 2
 }
 
+.home #wrapper-footer{
+	position: relative;
+}
+
 @media screen and (max-width: 600px) {
 	.category-blog{
 		margin-left: 6vw; 
