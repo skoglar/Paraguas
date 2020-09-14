@@ -17,7 +17,7 @@ $container = get_theme_mod( 'paraguas_container_type' );
 
 <div class="wrapper" id="wrapper-footer">
 
-	<div class="<?php echo esc_attr( $container ); ?> <?php if ( is_home() ){echo 'home_footer'} ?>">
+	<div class="<?php echo esc_attr( $container ); ?>">
 
 		<div class="row">
 
