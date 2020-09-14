@@ -1,7 +1,3 @@
-Travis build: [![Build Status](https://travis-ci.org/paraguas/paraguas.svg?branch=master)](https://travis-ci.org/paraguas/paraguas)
-
-#### See: [Official Demo](https://paraguas.com/paraguas) | Read: [Official Docs Page](https://paraguas.github.io/)
-
 # Paraguas an Understrap based theme for InvertidoEdiciones
 
 Website: [https://github.com/skoglar/Paraguas](https://github.com/skoglar/Paraguas)
