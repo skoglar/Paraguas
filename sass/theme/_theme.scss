@@ -260,40 +260,43 @@ nav .nav-link:hover{
     left: 0;
     bottom: 0;
     width: 100%;
+    z-index: 2
 }
 
 @media screen and (max-width: 600px) {
-  .category-blog{
-    margin-left: 6vw; 
-  }
+	.category-blog{
+		margin-left: 6vw; 
+	}
 
-  .blog-excerpt {
-    display: none;
-  }
+	.blog-excerpt {
+		display: none;
+	}
 
-  .entry-title{
-    font-size: 1em;
-   }
+	.entry-title{
+		font-size: 1em;
+	}
 
-  .mobile-post-excerpt {
-    max-width: 200px;
-    display: block;
-    margin: 10px;
-    margin-bottom: 50px;
+	.mobile-post-excerpt {
+		max-width: 200px;
+		display: block;
+		margin: 10px;
+		margin-bottom: 50px;
+	}
 
-  }
-
-  .instagram-feed{
-    align-content: center;
-  }
-  .sbi_photo{
-    height: 40vw!important;
-    width: 40vw!important;
-  }
-  .sbi_item{
-    width: auto!important;
-  }
-  .instagram-feed{
-    padding-left: 3vw;
-  }
+	.instagram-feed{
+		align-content: center;
+	}
+	.sbi_photo{
+		height: 40vw!important;
+		width: 40vw!important;
+	}
+	.sbi_item{
+		width: auto!important;
+	}
+	.instagram-feed{
+		padding-left: 3vw;
+	}
+	  #wrapper-footer {
+	    position: relative;
+	}
 }
