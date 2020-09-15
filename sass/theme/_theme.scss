@@ -46,6 +46,11 @@ body {
 
 
 #wrapper-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
     background-color: $secondary;
     color: $white;
 }
@@ -61,6 +66,7 @@ nav .nav-link{
 
 nav .nav-link:hover{
     background-color: $pastel-primary;
+    color: $white;
 }
 
 .showcase{
@@ -252,15 +258,6 @@ nav .nav-link:hover{
 .post-index-row{
     margin: 10px;
     margin-top: 25px;
-}
-
-
-#wrapper-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: 2
 }
 
 .home #wrapper-footer{
